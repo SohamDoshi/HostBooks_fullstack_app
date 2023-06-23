@@ -84,6 +84,11 @@ HTTP Method - DELETE
       http://localhost:8080/api/v1/employees/{employeeId}
 
 
+Or you can go to Swagger UI for test.
+
+      http://localhost:8080/swagger-ui/index.html
+
+
 <h2>How to run the application</h2>
 
 <ul>
