@@ -112,7 +112,8 @@ Or
             ng serve
   <li> Backend part will be listening to port localhost:8080 And Frontend will listening localhost:4200</li>
   <li> Base url</li>
-                http://localhost:4200/employees
+  
+           http://localhost:4200/employees
 </ul>
 
 *You can refer to this video if you having some issu. [link](https://drive.google.com/file/d/19LdK-zQT1vsGBLQ0kLrX4PimRQ2y-Jc2/view?usp=drive_link)
