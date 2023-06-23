@@ -39,7 +39,7 @@ public class EmployeeController {
 	@PostMapping("/employees")
 	public ResponseEntity<Employee> createEmployeeController(@RequestBody Employee employee) {
 		Employee emp = employeeDaoImpl.createEmployee(employee);
-		return new ResponseEntity<>(emp, HttpStatus.OK);
+		return new ResponseEntity<>(emp, HttpStatus.CREATED);
 	}
 	
 	// get employee by id rest api
