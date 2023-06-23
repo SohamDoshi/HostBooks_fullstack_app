@@ -27,8 +27,13 @@ export class UpdateEmployeeComponent implements OnInit {
   onSubmit(){
     this.employeeService.updateEmployee(this.id, this.employee).subscribe( data =>{
       this.goToEmployeeList();
-    }
-    , error => console.log(error));
+    }, 
+    error => {
+      console.log(error.error.message);
+      alert("First & Last name shoudn't contain any special characters and numbers. "
+      + "Email should be in email format for exmaple -> xxxxx@xxx.com");
+      console.log(error); 
+    });
   }
 
   goToEmployeeList(){

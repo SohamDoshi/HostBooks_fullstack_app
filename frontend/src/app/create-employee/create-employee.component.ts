@@ -22,7 +22,23 @@ export class CreateEmployeeComponent implements OnInit {
       console.log(data);
       this.goToEmployeeList();
     },
-    error => console.log(error));
+    error => {
+      console.log(error.error.message);
+      
+      const str = error.error.message;
+
+      const startWord = "interpolatedMessage='";
+      const endWord = "'";
+      // Construct the regular expression pattern
+      const pattern = new RegExp(`${startWord}(.*?)(?=${endWord})`, "g");
+      // Find all matched substrings using RegExp.match()
+      const matches = str.match(pattern);
+      const result = matches ? matches.map((match: string) => match.slice(startWord.length)) : [];
+      result.forEach((element: string) => {
+        alert(element);
+      });  
+      console.log(result); 
+    });
   }
 
   goToEmployeeList(){
